@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proxy for ChainLink (for LFGrow Hackathon)",
   "type": "module",
-  "main": "app.js",
+  "main": "functions/app.js",
   "scripts": {
     "build": "netlify-lambda build express",
     "start": "nodemon server-local.js"
@@ -19,13 +19,10 @@
   },
   "homepage": "https://github.com/nirga/twitter_proxy#readme",
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "netlify-lambda": "^2.0.15",
-    "node-fetch": "^3.2.3",
-    "serverless-http": "^2.7.0"
+    "encoding": "^0.1.13",
+    "node-fetch": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "netlify-cli": "^9.13.4"
   }
 }
