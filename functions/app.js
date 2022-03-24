@@ -16,8 +16,8 @@ const handler = async (event, context) => {
     body: twitterResJson.data[0].text.includes(
       event.queryStringParameters.challenge
     )
-      ? "1"
-      : "0",
+      ? JSON.stringify({ data: "1" })
+      : JSON.stringify({ data: "1" }),
   };
 };
 
