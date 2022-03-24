@@ -8,9 +8,16 @@ const handler = async (event, context) => {
     }
   );
   const twitterResJson = await twitterRes.json();
+
+  console.log();
+
   return {
     statusCode: 200,
-    body: JSON.stringify({ data: twitterResJson.data[0].text }),
+    body: twitterResJson.data[0].text.includes(
+      event.queryStringParameters.challenge
+    )
+      ? "1"
+      : "0",
   };
 };
 
