@@ -26,7 +26,7 @@ const handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ data: isValid ? 1 : 0 }),
+    body: JSON.stringify({ data: 1 }),
   };
 };
 
